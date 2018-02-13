@@ -1,0 +1,39 @@
+{
+    "env": {
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        // Commented strict rules for a while.
+        /*"indent": [
+            "warn",
+            "tab"
+        ],
+        "linebreak-style": [
+            "warn",
+            "windows"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],*/
+        "semi": [
+            "error",
+            "always"
+        ],
+        // Mby I should use pattern for function arguments?
+        // http://eslint.org/docs/rules/no-unused-vars#argsignorepattern
+        "no-unused-vars": [
+            "warn",
+            { "args": "none" }
+        ],
+        "no-console": "off", // Disabled due bot developing on nodejs only
+        
+        // TODO: enable(delete entries) rules below when tests will be stable!
+        "no-cond-assign": "off",
+        "no-unreachable": "off",
+        "no-extra-boolean-cast": "off"
+    }
+}
