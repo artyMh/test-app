@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Api from '../services/api';
 
 export function setUser(customerID) {
     return {
@@ -16,9 +16,7 @@ export function setLocation(locationID) {
 
 export function getUser(customer) {
     return (dispatch) => {
-        return axios.post('/user/login', {
-                customer: customer
-            })
+        return Api.getUser(customer)
             .then(function (response) {
                 dispatch(getLocation(response.data.customerID));
             })
@@ -30,9 +28,7 @@ export function getUser(customer) {
 
 export function getLocation(customerID) {
     return (dispatch) => {
-        return axios.post('/service/location', {
-                customerID: customerID
-            })
+        return Api.getLocation(customerID)
             .then(function (response) {
                 dispatch(setUser(customerID));
                 dispatch(setLocation(response.data.locationID));

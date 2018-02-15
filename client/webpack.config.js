@@ -1,11 +1,11 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: './app/index.html',
+    template: './src/index.html',
     filename: 'index.html',
     inject: 'body'
 });
 
-export default {
+module.exports = {
     entry: './src/index.js',
     output: {
         path: __dirname + '/dist',
@@ -23,7 +23,7 @@ export default {
     },
     devServer: {
 		proxy: {
-			"/": "http://127.0.0.1:3001",
+			"/": "http://localhost:3001",
 		}
 	},
     plugins: [HtmlWebpackPluginConfig]

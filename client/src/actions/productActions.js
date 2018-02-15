@@ -1,4 +1,4 @@
-import axios from 'axios';
+import Api from '../services/api';
 
 export function setProducts(products) {
     return {
@@ -9,9 +9,7 @@ export function setProducts(products) {
 
 export function getProducts(locationID) {
     return (dispatch) => {
-        return axios.post('/service/catalogue', {
-                locationID: locationID
-            })
+        return Api.getProducts(locationID)
             .then(function (response) {
                 dispatch(setProducts(response.data));
             })

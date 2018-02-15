@@ -1,6 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
+
+import Api from '../services/api';
 
 export default class Basket extends React.Component {
     constructor(props) {
@@ -24,7 +25,7 @@ export default class Basket extends React.Component {
     checkoutBasket() {
         const { basket } = this.props;
 
-        axios.post('/service/confirm', { products: basket.items })
+        Api.makeCheckout(basket)
             .then((response) => {
                 if (response.data === "CONFIRM SUCCESS") {
                     this.setState({checkoutConfirm: true});
@@ -108,7 +109,7 @@ export default class Basket extends React.Component {
         return (
             <div>
                 <div className="page-header">
-                    <h2>Choosed products</h2>
+                    <h2>Chosen products</h2>
                 </div>
                 {this.renderBasket()}
             </div>

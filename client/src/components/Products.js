@@ -10,6 +10,7 @@ export default class Products extends React.Component {
 
     componentWillReceiveProps(newProps) {
         const { locationID } = this.props;
+        
         if (locationID !== newProps.locationID) {
             this.props.getProducts(newProps.locationID);
         }

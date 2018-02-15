@@ -13,7 +13,7 @@ import * as basketActions from '../actions/basketActions';
 
 class App extends React.Component {
     render() {
-        const { customer, products, basket, basketActions, customerActions } = this.props;
+        const { customer, products, basket, basketActions, customerActions, productActions } = this.props;
 
         return (
             <div className="col-md-12 text-center">
