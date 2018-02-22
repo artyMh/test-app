@@ -29,7 +29,7 @@ Client:
 * ✔ make service api class
 * add tests (enzyme, jest)
 * fix paths in imports
-* rework redux (REQUEST, more clean api calls handling at redux store, confirm actions to redux not axios)
+* rework redux (REQUEST, more clean api calls handling at redux store, confirm actions to redux not axios, actions constants)
 * update react to v16
 	
 Server:
@@ -40,5 +40,5 @@ Server:
 * add mongodb (?)
 		
 Both:
-	* ✔ remove 'sky' mentions
-	* auth (?)
+* ✔ remove 'sky' mentions
+* auth (?)
