@@ -1,15 +1,16 @@
 import Api from '../services/api';
+import { CustomerActions } from '../constants/actions';
 
 export function setUser(customerID) {
     return {
-        type: 'SET_USER',
+        type: CustomerActions.SET_USER,
         payload: customerID
     };
 }
 
 export function setLocation(locationID) {
     return {
-        type: 'SET_LOCATION',
+        type:  CustomerActions.SET_LOCATION,
         payload: locationID
     };
 }

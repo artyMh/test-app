@@ -7,9 +7,9 @@ import Customer from '../components/Customer';
 import Products from '../components/Products';
 import Basket from '../components/Basket';
 
-import * as customerActions from '../actions/customerActions';
-import * as productActions from '../actions/productActions';
-import * as basketActions from '../actions/basketActions';
+import * as customerActions from '../actions/customer-actions';
+import * as productActions from '../actions/product-actions';
+import * as basketActions from '../actions/basket-actions';
 
 class App extends React.Component {
     render() {

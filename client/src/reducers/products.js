@@ -1,3 +1,5 @@
+import { ProductActions } from '../constants/actions';
+
 const initialState = {
     items: []
 };
@@ -5,7 +7,7 @@ const initialState = {
 export default function productsState(state = initialState, action) {
 
     switch(action.type) {
-        case 'SET_PRODUCTS':
+        case ProductActions.SET_PRODUCTS:
             return { ...state, items: action.payload };
             
         default:

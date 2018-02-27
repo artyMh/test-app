@@ -1,8 +1,9 @@
 import Api from '../services/api';
+import { ProductActions } from '../constants/actions';
 
 export function setProducts(products) {
     return {
-        type: 'SET_PRODUCTS',
+        type: ProductActions.SET_PRODUCTS,
         payload: products
     };
 }

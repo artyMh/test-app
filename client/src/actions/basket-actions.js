@@ -1,19 +1,21 @@
+import { BasketActions } from '../constants/actions';
+
 export function addProduct(product) {
     return {
-        type: 'ADD_PRODUCT',
+        type: BasketActions.ADD_PRODUCT,
         payload: product
     };
 }
 
 export function removeProduct(product) {
     return {
-        type: 'REMOVE_PRODUCT',
+        type: BasketActions.REMOVE_PRODUCT,
         payload: product
     };
 }
 
 export function removeAllProducts() {
     return {
-        type: 'REMOVE_ALL_PRODUCTS'
+        type: BasketActions.REMOVE_ALL_PRODUCTS
     };
 }

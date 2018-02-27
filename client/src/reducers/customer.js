@@ -1,3 +1,5 @@
+import { CustomerActions } from '../constants/actions';
+
 const initialState = {
     customerID: '',
     locationID: ''
@@ -6,10 +8,10 @@ const initialState = {
 export default function customerState(state = initialState, action) {
     
     switch(action.type) {
-        case 'SET_USER':
+        case CustomerActions.SET_USER:
             return { ...state, customerID: action.payload };
         
-        case 'SET_LOCATION':
+        case CustomerActions.SET_LOCATION:
             return { ...state, locationID: action.payload };
 
         default:

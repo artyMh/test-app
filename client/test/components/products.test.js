@@ -26,7 +26,7 @@ describe('Products component', () => {
     });
 
     describe('at initial load', () => {
-        
+        test('asd', () => {});
     });
 
     describe('when user is chosen', () => {
