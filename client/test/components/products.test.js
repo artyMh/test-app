@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Products from '../../src/components/Products';
 
@@ -22,7 +22,7 @@ describe('Products component', () => {
     */
 
     beforeEach(() => {
-        customerComponent = mount(<Products {...defaultProps} />);
+        customerComponent = shallow(<Products {...defaultProps} />);
     });
 
     describe('at initial load', () => {

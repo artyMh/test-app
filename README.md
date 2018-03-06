@@ -28,7 +28,7 @@ Client:
 * ✔ recheck code
 * ✔ make service api class
 * add tests (enzyme, jest)
-* fix paths in imports
+* ✔ fix paths in imports
 * rework redux (REQUEST, more clean api calls handling at redux store, confirm actions to redux not axios, actions constants)
 * update react to v16
 	
@@ -36,9 +36,6 @@ Server:
 * specify nodejs version
 * change test foldering
 * clean eslint config
-* require to import
-* add mongodb (?)
 		
 Both:
 * ✔ remove 'sky' mentions
-* auth (?)

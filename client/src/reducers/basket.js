@@ -1,4 +1,4 @@
-import { BasketActions } from '../constants/actions';
+import { BasketActions } from 'constants/actions';
 
 const initialState = {
     items: []

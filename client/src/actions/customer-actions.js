@@ -1,5 +1,5 @@
-import Api from '../services/api';
-import { CustomerActions } from '../constants/actions';
+import Api from 'services/api';
+import { CustomerActions } from 'constants/actions';
 
 export function setUser(customerID) {
     return {

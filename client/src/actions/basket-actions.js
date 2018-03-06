@@ -1,21 +1,27 @@
-import { BasketActions } from '../constants/actions';
+import { BasketActions } from 'constants/actions';
 
-export function addProduct(product) {
+const BasketActionCreator = (dispatch) => {
     return {
-        type: BasketActions.ADD_PRODUCT,
-        payload: product
-    };
-}
+        addProduct(product) {
+            dispatch({
+                type: BasketActions.ADD_PRODUCT,
+                payload: product
+            });
+        },
 
-export function removeProduct(product) {
-    return {
-        type: BasketActions.REMOVE_PRODUCT,
-        payload: product
-    };
-}
+        removeProduct(product) {
+            dispatch({
+                type: BasketActions.REMOVE_PRODUCT,
+                payload: product
+            });
+        },
 
-export function removeAllProducts() {
-    return {
-        type: BasketActions.REMOVE_ALL_PRODUCTS
+        removeAllProducts() {
+            dispatch({ 
+                type: BasketActions.REMOVE_ALL_PRODUCTS 
+            });
+        }
     };
-}
+};
+
+export default BasketActionCreator;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Api from '../services/api';
+import Api from 'services/api';
 
 export default class Basket extends React.Component {
     constructor(props) {

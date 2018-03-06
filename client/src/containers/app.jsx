@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Customer from '../components/Customer';
-import Products from '../components/Products';
-import Basket from '../components/Basket';
+import Customer from 'components/customer';
+import Products from 'components/products';
+import Basket from 'components/basket';
 
-import * as customerActions from '../actions/customer-actions';
-import * as productActions from '../actions/product-actions';
-import * as basketActions from '../actions/basket-actions';
+import * as customerActions from 'actions/customer-actions';
+import * as productActions from 'actions/product-actions';
+import BasketActionCreator from 'actions/basket-actions';
 
 class App extends React.Component {
     render() {
@@ -91,7 +91,8 @@ function mapDispatchToProps(dispatch) {
     return {
         customerActions: bindActionCreators(customerActions, dispatch),
         productActions: bindActionCreators(productActions, dispatch),
-        basketActions: bindActionCreators(basketActions, dispatch)
+        basketActions: BasketActionCreator(dispatch)
+        // bindActionCreators(basketActions, dispatch),
     };
 }
 

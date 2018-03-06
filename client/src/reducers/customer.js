@@ -1,4 +1,4 @@
-import { CustomerActions } from '../constants/actions';
+import { CustomerActions } from 'constants/actions';
 
 const initialState = {
     customerID: '',

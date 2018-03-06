@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import Customer from '../../src/components/Customer';
+import Customer from '../../src/components/customer';
 
 describe('Customer component', () => {
     let customerComponent;
